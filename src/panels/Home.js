@@ -1,14 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, Link, List, HeaderButton, platform, removeEventListener, PanelHeaderBack } from '@vkontakte/vkui';
+import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar, CellButton, Link, List, HeaderButton, platform, removeEventListener, PanelHeaderBack } from '@vkontakte/vkui';
 import Icon24Message from '@vkontakte/icons/dist/24/message';
 import { Icon24ErrorCircle } from '@vkontakte/icons';
 
 
 
-
-
+const CustomPopout = withAdaptivity(({ onClose, viewWidth }) => {
+	return (
+	  <PopoutWrapper onClick={onClose}>
+		<div style={{
+		  backgroundColor: "var(--background_content)",
+		  borderRadius: 8,
+		  position: "relative",
+		  padding: "12px"
+		}}>
+		  <h4>Кастомное модальное окно</h4>
+		  {viewWidth >= ViewWidth.SMALL_TABLET && <ModalDismissButton onClick={onClose} />}
+		</div>
+	  </PopoutWrapper>
+	)
+  }, {
+	viewWidth: true
+  })
 
 
 
@@ -65,7 +80,21 @@ const Home = ({ id, go, fetchedUser }) => (
 			
 				
 
-					
+					 return (
+    <SplitLayout popout={popout}>
+      <SplitCol>
+      <View activePanel="popout">
+        <Panel id="popout">
+          
+          <Group>
+            <CellButton onClick={onClick}>Открыть модальное окно</CellButton>
+          </Group>
+        </Panel>
+      </View>
+      </SplitCol>
+    </SplitLayout>
+  );
+
 
 	</Panel>
 
