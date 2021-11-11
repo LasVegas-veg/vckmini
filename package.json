@@ -2,7 +2,7 @@
   "name": "hello-world-lasv",
   "version": "1.0.0",
   "description": "VK Mini Apps Boilerplate",
-  "homepage": "https://github.com/LasVegas-veg/vckmini.git",
+  "homepage": "https://lasvegas-veg.github.io/vckmini/",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
