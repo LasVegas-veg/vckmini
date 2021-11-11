@@ -4,18 +4,17 @@ import PropTypes from 'prop-types';
 import { Panel, PanelHeader, PanelHeaderBack } from '@vkontakte/vkui';
 
 import persik from '../img/persik.png';
-import './Help.css';
+import './Vivod.css';
 
-const Help = props => (
+const Vivod = props => (
 	<Panel id={props.id}>
 		<PanelHeader
 			left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
 		>
-			Page
+			Вывод! 
 		</PanelHeader>
-		<img className="Persik" src={persik} alt="Persik The Cat"/>
-		
-    <div>
+		<img className="Vivod" src={persik} alt="Persik The Cat"/>
+        <div>
         <div><center><h1>{"Error page"}</h1></center></div>
     </div>
 
@@ -25,7 +24,7 @@ const Help = props => (
 
 
 
-Help.propTypes = {
+Vivod.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
@@ -33,4 +32,4 @@ Help.propTypes = {
 
 
 
-export default Help;
+export default Vivod;

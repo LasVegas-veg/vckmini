@@ -1,36 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Panel, PanelHeader, PanelHeaderBack } from '@vkontakte/vkui';
+import { Group, Panel, PanelHeader, PanelHeaderBack } from '@vkontakte/vkui';
 
 import persik from '../img/persik.png';
-import './Help.css';
+import './Load.css';
 
-const Help = props => (
+const Load = props => (
 	<Panel id={props.id}>
 		<PanelHeader
 			left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
 		>
-			Page
+			Пополнить счет
 		</PanelHeader>
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
 		
-    <div>
+     {
+   <div>
         <div><center><h1>{"Error page"}</h1></center></div>
-    </div>
+    </div>};
+
+    
+
 
 	</Panel>
-);
+)
 
 
 
 
-Help.propTypes = {
+Load.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 };
 
 
-
-
-export default Help;
+export default Load;

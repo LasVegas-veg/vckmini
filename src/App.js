@@ -4,7 +4,12 @@ import { View, ScreenSpinner, AdaptivityProvider, AppRoot } from '@vkontakte/vku
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
+
 import Persik from './panels/Persik';
+import Help from './panels/Help';
+import Load from './panels/Load';
+import Pers from './panels/Pers';
+import Vivod from './panels/Vivod';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
@@ -37,7 +42,10 @@ const App = () => {
 				<View activePanel={activePanel} popout={popout}>
 					<Home id='home' fetchedUser={fetchedUser} go={go} />
 					<Persik id='persik' go={go} />
-					
+					<Help id="Help" go={go} />
+					<Load id="Load" go={go} />
+					<Vivod id="Vivod" go={go} />
+					<Pers id="Pers" go={go} />
 				</View>
 			</AppRoot>
 		</AdaptivityProvider>
