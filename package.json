@@ -2,11 +2,12 @@
   "name": "hello-world-lasv",
   "version": "1.0.0",
   "description": "VK Mini Apps Boilerplate",
-  "homepage": "https://lasvegas-veg.github.io/vkminiapp.github.io/",
+  "homepage": "https://github.com/LasVegas-veg/vckmini.git",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "clean-source": "rimraf README.md src webroot package.json"
   },
