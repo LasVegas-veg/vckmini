@@ -7,6 +7,7 @@ import Icon24Message from '@vkontakte/icons/dist/24/message';
 
 
 
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Las Vegas Testing</PanelHeader>
@@ -39,9 +40,6 @@ const Home = ({ id, go, fetchedUser }) => (
 
 
 		</Group>
-
-
-	
 
 
 		<Div>

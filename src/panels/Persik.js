@@ -14,8 +14,12 @@ const Persik = props => (
 			Это Персик))
 		</PanelHeader>
 		<img className="Persik" src={persik} alt="Persik The Cat"/>
+		
+
 	</Panel>
 );
+
+
 
 
 Persik.propTypes = {
